@@ -1,12 +1,9 @@
 FROM breauxaj/ubuntu:latest
 
-RUN echo "deb https://repo.nagios.com/deb/$(lsb_release -cs) /" > /etc/apt/sources.list.d/nagios.list
-RUN wget -qO - https://repo.nagios.com/GPG-KEY-NAGIOS-V2 | apt-key add -
-
 RUN apt update \
   && apt install -y --no-install-recommends \
-  nagios \
-  nagios-plugins
+  nagios3 \
+  nagios-plugins-basic
 
  CMD ["/bin/bash"]
 
