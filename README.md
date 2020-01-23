@@ -7,7 +7,7 @@
 
 # nagios
 
-Ubuntu + Nagios
+Alpine + Nagios
 
 License
 -------

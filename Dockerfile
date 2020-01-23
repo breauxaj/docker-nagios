@@ -1,9 +1,7 @@
-FROM breauxaj/ubuntu:latest
+FROM breauxaj/alpine:latest
 
-RUN apt update \
-  && apt install -y --no-install-recommends \
-  nagios3 \
-  nagios-plugins-basic
+RUN apk add nagios \
+  && rm -rf /var/cache/apk/*
 
  CMD ["/bin/bash"]
 
