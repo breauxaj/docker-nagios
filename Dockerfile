@@ -3,6 +3,10 @@ FROM breauxaj/alpine:latest
 RUN apk add nagios \
   && rm -rf /var/cache/apk/*
 
+WORKDIR /etc/nagios
+
+VOLUME /etc/nagios
+
  CMD ["/bin/bash"]
 
 LABEL org.opencontainers.image.vendor="Breaux Heavy Industries" \
