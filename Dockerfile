@@ -1,6 +1,6 @@
 FROM breauxaj/alpine:latest
 
-RUN apk add nagios \
+RUN apk add apache2 nagios nagios-plugins nagios-web \
   && rm -rf /var/cache/apk/*
 
 WORKDIR /etc/nagios
